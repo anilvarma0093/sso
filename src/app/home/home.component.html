@@ -1,0 +1,11 @@
+
+<h4 *ngIf="auth.isAuthenticated()">
+    Current weather in {{greet.location.name}} at {{greet.location.localtime}}  is {{greet.current.temp_c}}
+     celsius with wind speed of {{greet.current.wind_mph}} mph 
+  </h4>
+<h4 *ngIf="!auth.isAuthenticated()">
+  You are not logged in! Please <a (click)="auth.login()">Log In</a> to check current weather in Detroit.
+</h4>
+
+
+
